@@ -11,4 +11,5 @@ int main() {
   y = temp;
 
   printf("x is %d and y is %d\n", x, y);
+    printf("T-Ara");
 }
