@@ -2,7 +2,7 @@
 
 int main() {
   int x = 30;
-  int y = 500;
+  int y = 300;
   printf("x is %d and y is %d\n", x, y);
 
   int temp = x;
