@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- JavaScript code -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#form').onsubmit = () => {
+      let task = document.querySelector("#task").value;
+
+      const li = document.createElement('li');
+      li.innerHTML = task;
+
+      document.querySelector('#taskList').append(li);
+
+      document.querySelector('#task').value = '';
+
+
+      return false;
+    };
+
+  });
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<form id="form">
+  <label>Task:</label> <input type="text" id="task" autofocus autcomplete="off" />
+  <input id="submit" type="submit" value="Add Task" />
+</form>
+<ol id="taskList">
+</ol>
+</body>
+</html>

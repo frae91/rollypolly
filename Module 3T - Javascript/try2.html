@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- JavaScript code -->
+  <script>
+    window.onload = function() {
+      document.querySelector('#countdown').innerHTML = '00:00';
+      document.querySelector('#form').onsubmit = function() {
+        var time = document.querySelector('#time').value;
+        startTimer(time);
+        return false;
+      };
+    };
+
+    function startTimer(duration) {
+      timer = duration;
+      setInterval(countdown, 1000);
+
+    }
+
+    function countdown() {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+      document.querySelector('#countdown').innerHTML = minutes + ":" + seconds;
+      if(--timer < 0) {
+        timer = 0;
+        document.querySelector('#countdown').style.color = 'red';
+      }
+    }
+  </script>
+  <title>Code Nomad 2018</title>
+</head>
+<body>
+<form id="form">
+  <label>Set Countdown (in mins):</label> &nbsp; <input type="number" id="time" autofocus/><br />
+  <input type="submit" />
+</form>
+
+<h1 id="countdown"></h1>
+</body>
+</html>

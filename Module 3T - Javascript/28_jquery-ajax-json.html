@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
+  <script src="jQuery.min.js"></script>
+
+  <!-- JavaScript code -->
+  <script>
+
+    $(document).ready(function() {
+      $('#form').submit(function() {
+        let name = $('#name').val();
+        $.getJSON('bar.json', function(result) {
+          $('#content').html('No user found!');
+          $.each(result, function(i, data) {
+            if(data.name.toLowerCase() == name.toLowerCase()) {
+              $('#content').html('');
+              $.each(result[i], function(j, res) {
+                $('#content').append(j + ' : ' + res + '<br />');
+              });
+            }
+          });
+        });
+        return false;
+      });
+    });
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<form id="form">
+  Search Name: <input type="text" autofocus autocomplete="off" id="name" />
+  <input type="submit"/>
+</form>
+<p id="content"></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
+  <script src="jQuery.min.js"></script>
+  <!-- JavaScript code -->
+
+  <script>
+    $(document).ready(function() {
+      $('#show').click(function() {
+        $('h1').show();
+      });
+
+      $('#hide').click(function() {
+        $('h1').hide();
+      });
+
+      $('#toggle').click(function() {
+        $('h1').toggle();
+      });
+    });
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<button id="show">Show</button><button id="hide">Hide</button><button id="toggle">Show/Hide</button>
+</body>
+</html>

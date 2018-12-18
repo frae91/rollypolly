@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+  <!-- JavaScript code -->
+  <script>
+
+    let counter = 0;
+
+    window.onload = () => {
+
+      document.querySelector('#showAjax').onclick = () => { getText('foo.txt', callbackFunc); };
+
+      document.querySelector('#timer').innerHTML = counter;
+
+      setInterval(timer, 1000);
+    }
+
+    function timer() {
+      counter++;
+      document.querySelector('#timer').innerHTML = counter;
+    }
+
+    function getText(file, callback) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          callback(this);
+        }
+      };
+
+      xhttp.open("GET", file, true);
+      xhttp.send();
+    }
+
+    function callbackFunc(xhttp) {
+      xhttp.setContentType('text/plain');
+      document.querySelector('#content').innerHTML = '<p>' + xhttp.responseText + '</p>';
+    }
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<h3>Time spent: <span id="timer"></span></h3>
+<button id="showAjax">Show</button>
+<div id="content"></div>
+</body>
+</html>

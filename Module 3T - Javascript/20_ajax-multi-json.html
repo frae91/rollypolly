@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+  <!-- JavaScript code -->
+  <script>
+
+    window.onload = () => {
+
+      document.querySelector('#form').onsubmit = submitForm;
+
+    }
+
+    function submitForm() {
+      let name = document.querySelector('#name').value;
+      getJSON(name);
+      return false;
+    }
+
+    function getJSON(arg) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var data = JSON.parse(this.responseText);
+          var content = 'No user found!';
+          for (i in data) {
+            if(data[i].name.toLowerCase() === arg.toLowerCase()) {
+              content = '';
+              for (j in data[i]) {
+                content += j + ' : ' + data[i][j] + '<br />';
+              }
+            }
+          }
+
+          document.querySelector('#content').innerHTML = content;
+        }
+      };
+
+      xhttp.open("GET", "bar.json", true);
+      xhttp.send();
+    }
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<h3>Time spent: <span id="timer"></span></h3>
+<form id="form">
+  Search Name: <input type="text" autofocus autocomplete="off" id="name" />
+  <input type="submit"/>
+</form>
+<p id="content"></p>
+</body>
+</html>

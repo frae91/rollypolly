@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- JavaScript code -->
+  <script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#form').onsubmit = function() {
+      let name = document.querySelector('#name').value;
+      alert(`Hello, ${name}!`);
+    };
+  });
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<form id="form">
+  <label>Name:</label> <input type="text" id="name" autofocus autocomplete="off" />
+  <input type="submit" />
+</form>
+</body>
+</html>

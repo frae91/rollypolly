@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- JavaScript code -->
+  <script>
+
+    let counter = 0;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('button').onclick = hello;
+    });
+
+
+    function hello() {
+      counter++;
+      document.querySelector('h1').innerHTML = counter;
+
+      if (counter % 5 === 0) {
+        alert(`The counter is already ${counter}!`);
+      }
+    }
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<button>Click me!</button>
+</body>
+</html>

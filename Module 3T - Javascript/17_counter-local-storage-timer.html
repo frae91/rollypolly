@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- JavaScript code -->
+  <script>
+
+    if (!localStorage.getItem('b'))
+      localStorage.setItem('b', 0);
+
+    window.onload = () => {
+      document.querySelector('#counter').innerHTML =  localStorage.getItem('b');
+      var interval = setInterval(count, 1000);
+
+      document.querySelector('#stop').onclick = function() {
+        clearTimeout(interval);
+      }
+    };
+
+    let counter = localStorage.getItem('b');
+    function count() {
+      counter++;
+      document.querySelector('#counter').innerHTML =  counter;
+      localStorage.setItem('b', counter);
+    }
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<h3>Counter: <span id="counter"></span></h3>
+<button id="stop">STOP</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- JavaScript code -->
+  <script>
+  window.onload = () => {
+    document.querySelectorAll('.color-change').forEach(button => {
+      button.onclick = () => {
+        document.querySelector('h1').style.color = button.dataset.color;
+      };
+    });
+
+  }
+
+  </script>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<button class="color-change" data-color="red">Red</button>
+<button class="color-change" data-color="green">Green</button>
+<button class="color-change" data-color="blue">Blue</button>
+</body>
+</html>

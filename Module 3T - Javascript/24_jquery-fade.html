@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
+  <script src="jQuery.min.js"></script>
+
+  <!-- JavaScript code -->
+  <script>
+    $(document).ready(function() {
+      $('#fadeIn').click(function() {
+        $('p').slideUp();
+      });
+
+      $('#fadeOut').click(function() {
+        $('p').slideDown();
+      });
+
+      $('#fadeToggle').click(function() {
+        $('p').animate({ height: '100px' }, 1000);
+      });
+
+      $('#fadeTo').click(function() {
+        $('p').fadeTo('show', 0.5);
+      })
+    });
+
+  </script>
+
+  <style>
+    p {
+      width: 50px;
+      height: 50px;
+      background: green;
+    }
+  </style>
+
+  <title>JavaScript Demo</title>
+</head>
+<body>
+<h1>Welcome to Code Nomad 2018!</h1>
+<button id="fadeIn">Fade In</button><button id="fadeOut">Fade Out</button>
+<button id="fadeToggle">In/Out</button><button id="fadeTo">Fade To</button>
+<p></p>
+</body>
+</html>

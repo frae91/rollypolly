@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- JavaScript code -->
+  <script>
+    document.addEventListener('DOMContentLoaded', callback);
+
+    function callback() {
+      document.querySelector('#code').addEventListener('keyup', function() {
+        var text = document.querySelector('#code').value;
+        document.querySelector('#display').innerHTML = text;
+
+        if (text === 'codenomad') {
+          document.querySelector('#code').disabled = true;
+          document.querySelector('#secret').style.visibility = 'visible';
+          document.querySelector('#display').style.color = 'gray';
+        }
+      });
+    }
+
+    function anotherCallback() {
+
+
+    }
+
+  </script>
+  <style>
+    #secret {
+      visibility: hidden;
+    }
+  </style>
+  <title>Code Nomad 2018</title>
+</head>
+<body>
+<form id="form">
+  <label>Unlock the Code:</label> &nbsp; <input type="text" id="code" autofocus/><br />
+</form>
+
+<h1 id="display"></h1>
+
+<h3 id="secret">YOU HAVE UNLOCKED THE CODE!</h3>
+</body>
+</html>

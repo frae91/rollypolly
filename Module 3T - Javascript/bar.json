@@ -1,0 +1,17 @@
+[
+  {
+    "name" : "Frae",
+    "country" : "Philippines",
+    "position" : "developer"
+  },
+  {
+    "name" : "Daniel",
+    "country" : "Singapore",
+    "position" : "ceo"
+  },
+  {
+    "name" : "Ernie",
+    "country" : "Malaysia",
+    "position" : "dancer"
+  }
+]
