@@ -1,0 +1,44 @@
+[
+  {
+    "title": "thank u, next",
+    "artist": "Ariana Grande",
+    "genre": "Pop",
+    "year": "2018"
+  },
+  {
+    "title": "Nice For What",
+    "artist": "Drake",
+    "genre": "Hip Hop",
+    "year": "2018"
+  },
+  {
+    "title": "Sometimes",
+    "artist": "Britney Spears",
+    "genre": "Pop",
+    "year": "2001"
+  },
+  {
+    "title": "I Want It That Way",
+    "artist": "Backstreet Boys",
+    "genre": "Pop",
+    "year": "1998"
+  },
+  {
+    "title": "Toxic",
+    "artist": "Britney Spears",
+    "genre": "Pop",
+    "year": "2002"
+  },
+  {
+    "title": "Without Me",
+    "artist": "Eminem",
+    "genre": "Rap",
+    "year": "2004"
+  },
+  {
+    "title": "Sugar, We're Going Down",
+    "artist": "Fall Out Boy",
+    "genre": "Rock",
+    "year": "2005"
+  }
+]
