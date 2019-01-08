@@ -3,7 +3,7 @@
 
 int main() {
   int x = 30;
-  int y = 42;
+  int y = 800;
   printf("x is %d and y is %d\n", x, y);
 
   int temp = x;

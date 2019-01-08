@@ -4,6 +4,12 @@
 
   <!-- JavaScript code -->
   <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('#code').onkeyup = () => {
+              form = document.querySelector('#code').value;
+              document.querySelector('#display').innerHTML = form;
+            }
+          })
     // Every time a user presses a key, the text on the 'code' field should be mirrored
     // onto the 'display' element.
     // If the user correctly types 'damonedoc', the text field should be disabled,
@@ -16,7 +22,7 @@
       visibility: hidden;
     }
   </style>
-  
+
   <title>Code Nomad 2018</title>
 </head>
 <body>
